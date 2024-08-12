@@ -1,0 +1,95 @@
+.navbar-is-black {
+  background-color: #fff; /* Set background color to white */
+  color: #000; /* Set text color to black for better contrast */
+  padding: 1rem;
+
+  .navbar-item {
+    color: #000; /* Set text color to black */
+    font-size: 1.2rem;
+    margin-right: 1rem;
+
+    a {
+      color: #000; /* Set link color to black */
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    .navbar-burger {
+      background: none;
+      border: none;
+      color: #000; /* Set burger color to black */
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 2rem;
+      width: 2rem;
+
+      span {
+        background-color: #000; /* Set burger line color to black */
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin: 2px 0;
+      }
+
+      &.is-active span {
+        background-color: #ff6347; /* Change color when active */
+      }
+    }
+  }
+
+  .navbar-menu {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    .navbar-start {
+      display: flex;
+      flex-direction: column;
+
+      .navbar-item {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .navbar-end {
+      display: flex;
+      flex-direction: column;
+
+      .navbar-item {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navbar-menu {
+      display: flex;
+      justify-content: space-between;
+
+      .navbar-start,
+      .navbar-end {
+        flex-direction: row;
+
+        .navbar-item {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .navbar-burger {
+      display: none;
+    }
+  }
+}
