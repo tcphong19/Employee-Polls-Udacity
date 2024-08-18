@@ -5,7 +5,7 @@
 Employee Polls is a tool for generating and participating in polls within a group. Each polls offers two choices: "Option A or Option B?"
 
 1. Log in => select a user from the list to log in
-2. Dashboard => switch between completed, all and pending polls
+2. Dashboard => switch between completed, all
 3. Polls => select a poll to view it individually and select a radio button to make a choice
 4. New polls => create a new polls with two options
 5. Leaderboard => view which user has submitted the most queries and responses.

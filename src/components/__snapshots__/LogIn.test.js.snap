@@ -22,7 +22,7 @@ Object {
             <p>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-lock fa-10x my-5"
+                class="svg-inline--fa fa-lock fa-10x my-5 lock"
                 data-icon="lock"
                 data-prefix="fas"
                 focusable="false"
@@ -37,7 +37,7 @@ Object {
               </svg>
             </p>
             <form
-              class="my-5"
+              class="my-5 form"
             >
               <div
                 class="select"
@@ -89,7 +89,7 @@ Object {
           <p>
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-lock fa-10x my-5"
+              class="svg-inline--fa fa-lock fa-10x my-5 lock"
               data-icon="lock"
               data-prefix="fas"
               focusable="false"
@@ -104,7 +104,7 @@ Object {
             </svg>
           </p>
           <form
-            class="my-5"
+            class="my-5 form"
           >
             <div
               class="select"

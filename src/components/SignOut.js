@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import "./SignOut.scss";
 import { setAuthedUser } from "../actions/authedUser";
 
 const SignOut = ({ name, avatarURL, dispatch }) => {
@@ -14,8 +15,11 @@ const SignOut = ({ name, avatarURL, dispatch }) => {
         <p className="title-color is-6">{name}</p>
       </div>
       <div className="column2">
-        <button className="button is-normal is-light is-rounded is-responsive" onClick={handleSignOut}>
-          Sign Out
+        <button
+          className="button is-normal is-light is-rounded is-responsive"
+          onClick={handleSignOut}
+        >
+          Log Out
         </button>
       </div>
     </div>
@@ -24,7 +28,7 @@ const SignOut = ({ name, avatarURL, dispatch }) => {
 
 const mapStateToProps = ({ authedUser, users }) => ({
   name: users[authedUser].name,
-  avatarURL: users[authedUser].avatarURL
+  avatarURL: users[authedUser].avatarURL,
 });
 
 export default connect(mapStateToProps)(SignOut);

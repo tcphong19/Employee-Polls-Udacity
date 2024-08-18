@@ -1,0 +1,32 @@
+.user-column {
+  display: flex;
+  align-items: center;
+
+  .user-info {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-name {
+    font-weight: bold;
+  }
+
+  .user-id {
+    font-size: 0.8rem;
+    color: #888;
+  }
+}
+
+.ant-table {
+  border-collapse: collapse; /* Đảm bảo các đường viền không bị trùng lặp */
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  border: 1px solid #d9d9d9; /* Thêm viền cho các ô */
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #fafafa; /* Thêm hiệu ứng khi hover */
+}

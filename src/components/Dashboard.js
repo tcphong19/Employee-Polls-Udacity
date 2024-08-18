@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Layout, Button, Typography } from "antd";
+import "./Dashboard.scss";
 import StickyNote from "./StickyNote";
 
 const { Content } = Layout;
@@ -33,7 +34,9 @@ const Dashboard = ({ unanswered, completed, all }) => {
   return (
     <Layout className="my-5">
       <Content className="d-flex flex-column align-items-center">
-      <Typography.Title level={3} style={{ color: 'black' }}>Dashboard</Typography.Title>
+        <Typography.Title level={3} style={{ color: "black" }}>
+          Dashboard
+        </Typography.Title>
         <div className="d-flex justify-content-center my-5">
           <Button.Group>
             <Button
@@ -57,7 +60,7 @@ const Dashboard = ({ unanswered, completed, all }) => {
           </Button.Group>
         </div>
         <h3 className="is-size-5">{title}</h3>
-        <div className="d-flex flex-wrap">
+        <div className="d-flex flex-wrap grid-container">
           {list.map((id) => (
             <StickyNote key={id} id={id} />
           ))}
@@ -66,7 +69,6 @@ const Dashboard = ({ unanswered, completed, all }) => {
     </Layout>
   );
 };
-
 
 const mapStateToProps = ({ authedUser, users, questions }) => {
   const { answers } = users[authedUser];

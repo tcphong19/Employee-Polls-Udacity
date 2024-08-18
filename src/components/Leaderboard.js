@@ -1,24 +1,55 @@
+import { Avatar, Layout, Table, Typography } from "antd";
+import { Content } from "antd/es/layout/layout";
 import React from "react";
 import { connect } from "react-redux";
-import { Card, List, Avatar } from 'antd';
+import "./Leaderboard.scss";
 
 const Leaderboard = ({ scoreboard }) => {
+  const columns = [
+    {
+      title: "Users",
+      dataIndex: "user",
+      key: "user",
+      render: (text, record) => (
+        <div className="user-column">
+          <Avatar src={record.avatarURL} />
+          <div className="user-info">
+            <div className="user-name">{record.user}</div>
+            <div className="user-id">{record.id}</div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Answered",
+      dataIndex: "answered",
+      key: "answered",
+    },
+    {
+      title: "Created",
+      dataIndex: "created",
+      key: "created",
+    },
+  ];
+
+  const data = scoreboard.map((user) => ({
+    key: user.id,
+    user: user.name,
+    avatarURL: user.avatarURL,
+    id: user.id, // Ensure ID is included in the data
+    answered: Object.keys(user.answers).length,
+    created: user.questions.length,
+  }));
+
   return (
-    <Card title="Leaderboard" className="my-5">
-      <List
-        itemLayout="horizontal"
-        dataSource={scoreboard}
-        renderItem={user => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={<Avatar src={user.avatarURL} />}
-              title={<a href={`/users/${user.id}`}>{user.name}</a>}
-              description={`Answered: ${Object.keys(user.answers).length} | Created: ${user.questions.length}`}
-            />
-          </List.Item>
-        )}
-      />
-    </Card>
+    <Layout className="my-5">
+      <Content className="d-flex flex-column align-items-center">
+        <Typography.Title level={3} style={{ color: "black" }}>
+          Leaderboard
+        </Typography.Title>{" "}
+        <Table columns={columns} dataSource={data} pagination={false} />
+      </Content>
+    </Layout>
   );
 };
 

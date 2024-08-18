@@ -1,0 +1,15 @@
+.my-5 {
+  background-color: #fff;
+  margin-right: 10px;
+  .d-flex {
+    margin-left: 10px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Tạo 2 cột với kích thước bằng nhau */
+    gap: 1rem; /* Khoảng cách giữa các phần tử */
+  }
+}

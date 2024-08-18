@@ -1,0 +1,64 @@
+.columns {
+  display: flex;
+  justify-content: center; /* Căn giữa các cột */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-top: 2rem; /* Thêm khoảng cách phía trên */
+}
+
+.column {
+  max-width: 600px; /* Giới hạn chiều rộng của cột */
+  width: 100% !important;
+}
+
+.card {
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .ant-avatar {
+    width: 64px; /* Tăng kích thước avatar */
+    height: 64px; /* Tăng kích thước avatar */
+    margin-right: 1rem;
+  }
+
+  .ant-typography {
+    font-size: 1.2rem;
+  }
+}
+
+.has-text-center {
+  text-align: left;
+  margin-top: 15px !important;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.is-mobile {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .tag-percent{
+    width: 100px;
+  }
+}
+
+.is-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.is-narrow {
+  flex: 0 0 auto;
+}

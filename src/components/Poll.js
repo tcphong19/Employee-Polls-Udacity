@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { handleSaveQuestionAnswer } from "../actions/shared";
 import { withRouter } from "../utils/helpers";
+import "./Poll.scss";
 import NotFound from "./404";
 import {
   Card,
@@ -64,10 +65,11 @@ const Poll = (props) => {
   return exists ? (
     <div className="columns">
       <div className="column is-half is-one-quarter-fullhd">
-        <Card>
+        <Card className="card">
           <Card.Meta
             avatar={<Avatar src={avatarURL} alt={name} />}
             title={<Text strong>{name} asks</Text>}
+            className="card-meta"
           />
           <h3 className="my-0 mb-5 has-text-center">Would you rather...</h3>
           <Form onSubmit={handleVote}>
@@ -86,6 +88,7 @@ const Poll = (props) => {
                       </div>
                       <div className="column is-narrow">
                         <Tag
+                          className="tag-percent"
                           color={
                             optionOneVotes >= optionTwoVotes ? "green" : "red"
                           }
@@ -114,6 +117,7 @@ const Poll = (props) => {
                       </div>
                       <div className="column is-narrow">
                         <Tag
+                          className="tag-percent"
                           color={
                             optionOneVotes <= optionTwoVotes ? "green" : "red"
                           }

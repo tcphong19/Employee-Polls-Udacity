@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-render-in-setup */
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
