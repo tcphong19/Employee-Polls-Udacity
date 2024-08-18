@@ -12,7 +12,7 @@ Employee Polls is a tool for generating and participating in polls within a grou
 
 ## Getting Started
 
-- Clone the repository `git clone https://github.com/prosenjeetshil/Employee-Polls-Udacity.git`
+- Clone the repository `git clone https://github.com/tcphong19/Employee-Polls-Udacity.git`
 - Please use `npm install` to install dependencies. use `npm start` to start the app.
 - The project can be viewed in the browser at [http://localhost:3000](http://localhost:3000)
 - Please use `npm test` to launches the test runner in the interactive watch mode.
