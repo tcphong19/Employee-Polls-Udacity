@@ -1,21 +1,21 @@
 let users = {
-  sarahedo: {
-    id: "sarahedo",
+  johnsmith: {
+    id: "johnsmith",
     password: "password123",
-    name: "Sarah Edo",
+    name: "John Smith",
     avatarURL: "https://cdn-icons-png.flaticon.com/256/4825/4825112.png",
     answers: {
       "8xf0y6ziyjabvozdd253nd": "optionOne",
-      "6ni6ok3ym7mf1p33lnez": "optionOne",
+      "6ni6ok3ym7mf1p33lnez": "optionTwo",
       am8ehyc8byjqgar0jgpub9: "optionTwo",
       loxhs1bqm25b708cmbf3g: "optionTwo",
     },
     questions: ["8xf0y6ziyjabvozdd253nd", "am8ehyc8byjqgar0jgpub9"],
   },
-  tylermcginnis: {
-    id: "tylermcginnis",
+  janedoe: {
+    id: "janedoe",
     password: "abc321",
-    name: "Tyler McGinnis",
+    name: "Jane Doe",
     avatarURL: "https://cdn-icons-png.flaticon.com/256/4825/4825038.png",
     answers: {
       vthrdm985a262al8qx3do: "optionOne",
@@ -23,22 +23,22 @@ let users = {
     },
     questions: ["loxhs1bqm25b708cmbf3g", "vthrdm985a262al8qx3do"],
   },
-  mtsamis: {
-    id: "mtsamis",
+  mikewong: {
+    id: "mikewong",
     password: "xyz123",
-    name: "Mike Tsamis",
+    name: "Mike Wong",
     avatarURL: "https://cdn-icons-png.flaticon.com/256/4825/4825015.png",
     answers: {
       xj352vofupe1dqz9emx13r: "optionOne",
       vthrdm985a262al8qx3do: "optionTwo",
-      "6ni6ok3ym7mf1p33lnez": "optionOne",
+      "6ni6ok3ym7mf1p33lnez": "optionTwo",
     },
     questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
   },
-  zoshikanlu: {
-    id: "zoshikanlu",
+  annlee: {
+    id: "annlee",
     password: "pass246",
-    name: "Zenobia Oshikanlu",
+    name: "Ann Lee",
     avatarURL: "https://cdn-icons-png.flaticon.com/256/4825/4825108.png",
     answers: {
       xj352vofupe1dqz9emx13r: "optionOne",
@@ -50,10 +50,10 @@ let users = {
 let questions = {
   "8xf0y6ziyjabvozdd253nd": {
     id: "8xf0y6ziyjabvozdd253nd",
-    author: "sarahedo",
+    author: "johnsmith",
     timestamp: 1467166872634,
     optionOne: {
-      votes: ["sarahedo"],
+      votes: ["johnsmith"],
       text: "Build our new application with Javascript",
     },
     optionTwo: {
@@ -63,67 +63,67 @@ let questions = {
   },
   "6ni6ok3ym7mf1p33lnez": {
     id: "6ni6ok3ym7mf1p33lnez",
-    author: "mtsamis",
+    author: "mikewong",
     timestamp: 1468479767190,
     optionOne: {
       votes: [],
-      text: "hire more frontend developers",
+      text: "Hire more frontend developers",
     },
     optionTwo: {
-      votes: ["mtsamis", "sarahedo"],
-      text: "hire more backend developers",
+      votes: ["mikewong", "johnsmith"],
+      text: "Hire more backend developers",
     },
   },
   am8ehyc8byjqgar0jgpub9: {
     id: "am8ehyc8byjqgar0jgpub9",
-    author: "sarahedo",
+    author: "johnsmith",
     timestamp: 1488579767190,
     optionOne: {
       votes: [],
-      text: "conduct a release retrospective 1 week after a release",
+      text: "Conduct a release retrospective 1 week after a release",
     },
     optionTwo: {
-      votes: ["sarahedo"],
-      text: "conduct release retrospectives quarterly",
+      votes: ["johnsmith"],
+      text: "Conduct release retrospectives quarterly",
     },
   },
   loxhs1bqm25b708cmbf3g: {
     id: "loxhs1bqm25b708cmbf3g",
-    author: "tylermcginnis",
+    author: "janedoe",
     timestamp: 1482579767190,
     optionOne: {
       votes: [],
-      text: "have code reviews conducted by peers",
+      text: "Have code reviews conducted by peers",
     },
     optionTwo: {
-      votes: ["sarahedo"],
-      text: "have code reviews conducted by managers",
+      votes: ["johnsmith"],
+      text: "Have code reviews conducted by managers",
     },
   },
   vthrdm985a262al8qx3do: {
     id: "vthrdm985a262al8qx3do",
-    author: "tylermcginnis",
+    author: "janedoe",
     timestamp: 1489579767190,
     optionOne: {
-      votes: ["tylermcginnis"],
-      text: "take a course on ReactJS",
+      votes: ["janedoe"],
+      text: "Take a course on ReactJS",
     },
     optionTwo: {
-      votes: ["mtsamis"],
-      text: "take a course on unit testing with Jest",
+      votes: ["mikewong"],
+      text: "Take a course on unit testing with Jest",
     },
   },
   xj352vofupe1dqz9emx13r: {
     id: "xj352vofupe1dqz9emx13r",
-    author: "mtsamis",
+    author: "mikewong",
     timestamp: 1493579767190,
     optionOne: {
-      votes: ["mtsamis", "zoshikanlu"],
-      text: "deploy to production once every two weeks",
+      votes: ["mikewong", "annlee"],
+      text: "Deploy to production once every two weeks",
     },
     optionTwo: {
-      votes: ["tylermcginnis"],
-      text: "deploy to production once every month",
+      votes: ["janedoe"],
+      text: "Deploy to production once every month",
     },
   },
 };
