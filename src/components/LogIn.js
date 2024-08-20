@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
 import "./LogIn.scss";
 import { setAuthedUser } from "../actions/authedUser";
@@ -27,11 +27,7 @@ const Login = ({ users, dispatch }) => {
         <div className="column is-two-fifths">
           <h2 className="is-size-2 my-5">Login</h2>
           <p>
-            <FontAwesomeIcon
-              className="my-5 lock"
-              icon={solid("lock")}
-              size="10x"
-            />
+            <FontAwesomeIcon className="my-5 lock" icon={faLock} size="10x" />
           </p>
 
           <form className="my-5 form">
