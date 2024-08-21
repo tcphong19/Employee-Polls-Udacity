@@ -1,4 +1,3 @@
-
 import { fetchData, saveQuestion, saveQuestionAnswer } from "./api";
 
 describe("fetchData", () => {
@@ -11,7 +10,7 @@ describe("fetchData", () => {
 
 describe("saveQuestion", () => {
   it("will save the poll question to the database", async () => {
-    const author = "author";
+    const author = "johnsmith";
     const optionOneText = "option one";
     const optionTwoText = "option two";
     const question = await saveQuestion({
@@ -26,7 +25,7 @@ describe("saveQuestion", () => {
 
 describe("saveQuestionAnswer", () => {
   it("will save a poll answer for a particular question", async () => {
-    const authedUser = "mtsamis";
+    const authedUser = "johnsmith";
     const qid = "8xf0y6ziyjabvozdd253nd";
     const answer = "optionTwo";
     const saved = await saveQuestionAnswer(authedUser, qid, answer);

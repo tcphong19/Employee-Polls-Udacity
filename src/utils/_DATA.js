@@ -190,6 +190,9 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
     if (!authedUser || !qid || !answer) {
       reject("Please provide authedUser, qid, and answer");
     }
+    if (!users[authedUser]) {
+      reject(`User ${authedUser} does not exist.`);
+    }
 
     setTimeout(() => {
       users = {
@@ -213,7 +216,6 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
           },
         },
       };
-
       resolve(true);
     }, 500);
   });
